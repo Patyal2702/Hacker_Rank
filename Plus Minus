@@ -1,0 +1,40 @@
+Link to the question:  https://www.hackerrank.com/challenges/plus-minus/problem?h_r=profile
+
+My solution: 
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int size=sc.nextInt();
+        int[] arr=new int[size];
+        for(int i=0;i<size;i++){
+          arr[i]=  sc.nextInt();
+        }
+        int positive=0;
+        int negative=0;
+        int zero=0;
+        float a=0f;
+        float b=0f;
+        float c=0f;
+        
+        for(int i=0;i<size;i++){
+            if(arr[i]>0){
+                positive++;
+            }
+            if(arr[i]<0){
+                negative++;
+            }
+            if(arr[i]==0){
+                zero++;
+            }
+           
+        }
+        
+        a=(float) positive/ size;
+        b= (float)negative/ size;
+        c= (float)zero/ size;
+        System.out.println(a + "\n"+b+"\n"+c);
+    }
+}
