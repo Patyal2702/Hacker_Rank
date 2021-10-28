@@ -1,0 +1,22 @@
+Question Link: https://www.hackerrank.com/challenges/strange-advertising/problem?h_r=profile
+
+Solution:
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int x=sc.nextInt();
+        int days=5;
+        int like=2;
+         int y=2;
+        for(int i=2;i<=x;i++){
+            days = like*3;
+            like = days/2;
+           y=y+like;
+        }   
+                System.out.println(y);
+            
+        
+    }
+}
