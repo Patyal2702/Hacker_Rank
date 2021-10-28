@@ -1,0 +1,21 @@
+Question Link: https://www.hackerrank.com/challenges/tutorial-intro/problem?h_r=profile
+
+Solution:
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num=sc.nextInt();
+        int size=sc.nextInt();
+        int[] arr=new int[size];
+        int count=-1;
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+            count++;
+            if(arr[i]==num){
+                System.out.println(count);
+            }
+        }
+    }
+}
