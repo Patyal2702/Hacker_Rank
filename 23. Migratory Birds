@@ -1,0 +1,55 @@
+Question Link: https://www.hackerrank.com/challenges/migratory-birds/problem?h_r=profile
+
+Solution: 
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int size=sc.nextInt();
+        int[] arr=new int[size];
+        int largest=arr[0];
+        
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        sc.close();
+         for(int i=0;i<size;i++){
+            if(arr[i]>largest){
+                largest= arr[i];
+            }
+            else{
+                continue;
+            }
+        }
+         int count=0;
+         int[] arr1=new int[largest+1];
+         for(int i=0;i<=largest;i++){
+             for(int j=0;j<size;j++){
+                 if(arr[j]==i){
+                   count++;
+                 }
+            }
+             arr1[i]=count;
+             count=0;
+         }
+           
+            int largeCount=arr1[0];
+            for(int i=0;i<=largest;i++){ 
+                  if(arr1[i]>largeCount){
+                      largeCount=arr1[i];
+                    }
+         }
+       for(int i=0;i<=largest;i++){
+        if(arr1[i]==largeCount){
+         System.out.println(i);
+         break;
+        }
+        else
+        continue;
+       }
+    }
+}
+
+
+//took 3 days to solve this problem
