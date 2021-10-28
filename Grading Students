@@ -1,0 +1,43 @@
+Link to the question: https://www.hackerrank.com/challenges/grading/problem?h_r=profile
+
+My Solution:
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int numberOfStudent = sc.nextInt();
+        int[] arr = new int[numberOfStudent];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+        gradingStudents(arr);
+    }
+
+    public static void gradingStudents(int[] arr){
+        
+          for(int i=0;i<arr.length;i++){
+              if(arr[i]<38){
+                   System.out.println(arr[i]);
+              }
+              
+              else{
+                  int k=arr[i];
+                  for(int j=arr[i];j<arr[i]+5;j++){
+                      if(j%5==0){
+                          if(j-k<3)
+                          System.out.println(j);
+                          else
+                          System.out.println(k);
+                      }
+                      else{
+                          continue;
+                      }
+                  }
+              }
+
+              
+          }
+    }
+}
