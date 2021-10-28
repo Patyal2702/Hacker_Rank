@@ -1,0 +1,24 @@
+Question Link: https://www.hackerrank.com/challenges/mini-max-sum/problem?h_r=profile
+
+Solution:
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int arr[]=new int[5];
+        for(int i=0;i<5;i++){
+            arr[i]=sc.nextInt();
+        }
+        Arrays.sort(arr);
+        long min=0l;
+        long max=0l;
+       for(int i=0;i<=3;i++){
+       max=max+arr[i];
+       }
+       for(int i=1;i<=4;i++){
+       min=min+arr[i];
+       }
+       System.out.println(max  + " " + min);
+    }
+} 
