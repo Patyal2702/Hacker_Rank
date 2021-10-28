@@ -1,0 +1,50 @@
+Link to the question: https://www.hackerrank.com/challenges/apple-and-orange/problem?h_r=profile
+
+My Solution:
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+     Scanner sc = new Scanner(System.in);
+     int samHouseStart=sc.nextInt();
+     int samHouseEnd = sc.nextInt();
+     int appleTree =sc.nextInt();
+     int orangeTree=sc.nextInt();
+     int size1=sc.nextInt();
+     int size2=sc.nextInt();
+     int[] arr1=new int[size1];
+     int[] arr2=new int[size2];
+
+     for(int i=0;i<arr1.length;i++){
+          arr1[i]=sc.nextInt();
+     }
+     for(int j=0;j<arr2.length;j++){
+          arr2[j]=sc.nextInt();
+     }
+     
+    
+
+    int count1=0;
+    int count2=0;
+for(int k=0;k<arr1.length;k++){
+    arr1[k]=arr1[k]+appleTree;
+    }
+
+for(int m=0;m<arr2.length;m++){
+    arr2[m]=arr2[m]+orangeTree;
+    }
+for(int n=0;n<arr1.length;n++){
+    if(arr1[n]>=samHouseStart && arr1[n]<=samHouseEnd){
+        count1++;
+    }
+}
+    for(int o=0;o<arr2.length;o++){
+    if(arr2[o]>=samHouseStart && arr2[o]<=samHouseEnd){
+        count2++;
+    }
+    }
+System.out.println(count1);
+System.out.println(count2);
+
+    }
+}
