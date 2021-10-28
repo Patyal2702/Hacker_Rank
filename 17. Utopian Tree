@@ -1,0 +1,43 @@
+Question Link : https://www.hackerrank.com/challenges/utopian-tree/problem?h_r=profile
+
+Solution:
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int[] arr=new int[a];
+        int largest=arr[0];
+            for(int i=0;i<a;i++){
+            arr[i]=sc.nextInt();
+            if(arr[i]>largest){
+                largest=arr[i];
+            }
+            else {
+                continue;
+            }
+        }
+        int[] arr1=new int[largest+1];
+        arr1[0]=1;
+        int sum=1;
+        for(int i=1;i<largest+1;i++){
+            if(i%2==0){
+                sum++;
+               arr1[i]=sum;
+            }
+            else{
+                sum=sum*2;
+                arr1[i]=sum;
+            }
+        }
+       
+        for(int i=0;i<a;i++){
+            for(int j=0;j<largest+1;j++){
+            if(arr[i]==j){
+                System.out.println(arr1[j]);
+            }
+            }
+        }
+    }
+}
