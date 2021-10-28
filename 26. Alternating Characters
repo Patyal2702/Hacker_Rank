@@ -1,0 +1,23 @@
+Question Link: https://www.hackerrank.com/challenges/alternating-characters/problem?h_r=profile
+
+Solution:
+
+import java.util.*;
+public class Main{
+  public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+int n = sc.nextInt();
+ int sum=0;
+while(n>0){
+String str=sc.next();    
+ for(int i=0;i<str.length()-1;i++){
+   if(str.charAt(i)==str.charAt(i+1)){
+      sum++;
+   }
+ }
+ System.out.println(sum);
+ sum=0;
+n--;
+}
+}
+}
