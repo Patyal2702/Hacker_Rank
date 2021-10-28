@@ -1,0 +1,39 @@
+Question Link: https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem?h_r=profile
+
+Solution: 
+
+import java.util.*;
+public class Main{
+  public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int first=sc.nextInt(); 
+    int second=sc.nextInt();  
+    int divide=sc.nextInt();  
+    int sum=0;                   
+    for(int i=first;i<=second;i++){  
+       int num=reverseOfNumber(i);   
+           if(i-num>0){            
+             if((i-num)%divide==0){
+               sum++;
+             }
+           }
+           else{
+             if((num-i)%divide==0){   
+               sum++;
+             }
+           }
+    }
+    System.out.println(sum);
+  }
+
+public static int reverseOfNumber(int number){
+  int r=0;
+  int finalNumber=0;
+  while(number>0){
+    r=number%10;
+    finalNumber=(finalNumber*10)+r;
+    number=number/10;
+  }
+  return finalNumber;
+}
+} 
