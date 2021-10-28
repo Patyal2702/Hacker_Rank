@@ -1,0 +1,43 @@
+Question Link: https://www.hackerrank.com/challenges/cats-and-a-mouse/problem?h_r=profile
+
+Solution:
+
+import java.util.*;
+public class CatMouse{
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int q=sc.nextInt();
+    int[][] arr=new int[q][3];
+    for(int i=0;i<arr.length;i++){
+        for(int j=0;j<3;j++){
+            arr[i][j]=sc.nextInt();
+        }
+}
+      
+for(int i=0;i<arr.length;i++){
+        
+           int catA=arr[i][2]-arr[i][0];
+           if(catA<0){
+               catA=catA*(-1);
+           }
+           else catA=catA;
+
+           int catB=arr[i][2]-arr[i][1];
+           if(catB<0){
+               catB=catB*(-1);
+           }
+           else catA=catA;
+        
+        if(catA<catB){
+               System.out.println("Cat A");
+           }
+           else if(catB<catA){
+               System.out.println("Cat B");
+           }
+             else
+             System.out.println("Mouse C");
+}
+
+
+}
+}
