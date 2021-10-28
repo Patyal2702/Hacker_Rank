@@ -1,0 +1,51 @@
+Question Link: https://www.hackerrank.com/challenges/designer-pdf-viewer/problem?h_r=profile
+
+
+Solution:
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+      
+        int[] finall = new int[26];
+        for(int i=0;i<26;i++){
+          
+            finall[i]=sc.nextInt();
+        }
+          sc.nextLine();
+        String str=sc.nextLine();
+        char[] ch = str.toCharArray(); 
+        
+        int[] arr1=new int[ch.length];
+        int sum=0;
+        
+         for(int j=0;j<arr1.length;j++){
+        for(char i='a';i<='z';i++){
+            sum++;
+            if(i==ch[j]){
+                arr1[j]=sum;
+               
+            }
+        }
+        sum=0;
+        }
+        int[] arr2=new int[arr1.length];
+
+     for(int i=0;i<26;i++){
+         for(int j=0;j<arr1.length;j++){
+             if(arr1[j]-1==i){
+                arr2[j]=finall[i];
+                 }
+             }
+         }
+     
+            Arrays.sort(arr2);
+            int ff =(int) ((arr2[arr2.length-1])*arr2.length);
+            System.out.println(ff);
+    }
+
+}
+
+
+
