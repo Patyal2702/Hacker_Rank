@@ -1,0 +1,35 @@
+Question Link: https://www.hackerrank.com/challenges/find-digits/problem?h_r=profile
+
+Solution:
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); 
+        int[] arr=new int[n]; 
+        int j=0;
+        int sum=0;        
+        while(n>0){  
+            int number = sc.nextInt(); 
+            int temp=number;
+        for(;temp>0;){    
+            int r=temp%10;  
+            if(r>0){
+            if(number%r==0){
+                sum++;   
+            }
+            }
+            temp=temp/10;   
+        }
+        
+        arr[j]=sum;
+        j++;
+        sum=0;
+        n--;
+    }
+    for(int x:arr){
+      System.out.println(x);
+    }
+}
+}
